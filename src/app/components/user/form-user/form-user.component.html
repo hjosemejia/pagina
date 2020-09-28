@@ -1,0 +1,84 @@
+<div class="padre">
+    <div class="izquierdo">
+        <h3>FORMULARIO DE USUARIO</h3>
+
+        <div class="form-group name">
+            <label for="name">
+                NOMBRE
+            </label>
+            <input class="form-control tama" type="text" [(ngModel)]="usr.name" placeholder="NOMBRE" name="name" id="name"  size="5" autofocus>
+        </div>
+
+        <div class="form-group surname">
+            <label for="surname">
+                APELLIDO
+            </label>
+            <input class="form-control tama" type="text" [(ngModel)]="usr.surname" placeholder="APELLIDO" name="surname" id="surname" size="5" autofocus>
+        </div>
+
+        <div class="form-group cargo">
+            <label for="cargo">
+                CARGO
+            </label>
+            <input class="form-control tama" type="text" [(ngModel)]="usr.cargo" placeholder="CARGO" name="cargo" id="cargo" size="5" autofocus> 
+        </div>
+
+        <div class="form-group salario">
+            <label for="salario">
+                SALARIO
+            </label>
+            <input class="form-control tama" type="text" [(ngModel)]="usr.salario" placeholder="SALARIO" name="salario" id="salario" size="5" autofocus>
+        </div>
+        <div class="form-group deducciones">
+            <label for="deducciones">
+                DEDUCCIONES
+            </label>
+            <input class="form-control tama" type="text" [(ngModel)]="usr.deducciones" placeholder="DEDUCCIONES" name="deducciones" id="deducciones" size="5" autofocus>
+        </div>
+        <div class="form-group devengados">
+            <label for="devengados">
+                DEVENGADOS
+            </label>
+            <input class="form-control tama" type="text" [(ngModel)]="usr.devengados" placeholder="DEVENGADOS" name="devengados" id="devengados" size="5" autofocus>
+        </div>
+        <button type="button" class="btn btn-success" (click)="saveUser()">
+            Success
+        </button>          
+    </div>
+
+    <div class="derecho">
+        <h3>LSITA DE USUARIOS</h3>
+
+        <!-- {{ users | json}} -->
+        <table class="table table-striped table-bordered table-hover">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">NOMBRE</th>
+                <th scope="col">APELLIDO</th>
+                <th scope="col">CARGO</th>
+                <th scope="col">SALARIO</th>
+                <th scope="col">DEVENGADO</th>
+                <th scope="col">DEDUCCIONES</th>
+                <th scope="col">TOTAL A PAGAR</th>
+                <th scope="col">ACCIONES</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of users">
+                <th>{{ user.name }}</th>
+                <td>{{ user.surname }}</td>
+                <td>{{ user.cargo }}</td>
+                <td>{{ user.salario }}</td>
+                <td>{{ user.devengados }}</td>
+                <td>{{ user.deducciones }}</td>
+                <td>{{ user.topagar }}</td>
+                <td>
+                    <a class="btn btn-primary"></a>
+                    <button class="btn btn-warning"></button>
+                </td>       
+              </tr>
+            </tbody>
+          </table> 
+    </div>
+</div>
+

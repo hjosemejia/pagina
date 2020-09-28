@@ -1,0 +1,30 @@
+.cabecera{
+    grid-column: span 12;
+    border: 1px solid black;
+    background-color: #00bcd4;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+    .logo1{
+        flex: 1;
+        border: 2px solid rgb(252, 255, 71); 
+        align-content: flex-end;
+    }
+
+    .titulo{
+        flex: 11;
+        /* border: 2px solid rgb(252, 255, 71); */
+        
+        text-align: center;
+    }
+
+        #nombre{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: whitesmoke;
+            text-shadow: 3px 1px;
+            font-weight: 900;
+        }
